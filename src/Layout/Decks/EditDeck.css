@@ -1,0 +1,32 @@
+.edit-deck-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin: auto;
+}
+
+.ed-breadcrumb-main {
+    padding: 10px;
+    width: 100%;
+}
+
+.ed-breadcrumb {
+    padding: 10px;
+    width: 100%;
+}
+
+.ed-form {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    align-items: left;
+
+}
+
+.ed-button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+
+}

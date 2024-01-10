@@ -1,0 +1,47 @@
+.button-container {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  .cardTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cardTitle p {
+    margin: 0;
+  }
+  
+  
+  .card-container {
+  
+    margin: auto;
+    justify-content: space-around;
+    text-align: center;
+  
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .name {
+    font-size: 25px;
+    color: #5e6368;
+  }
+  
+  .number {
+    font-size: 16px;
+    color: #5e6368;
+  
+  }
+  
+  .description {
+    font-size: 22px;
+    text-align: left;
+    color: #64676a
+  }

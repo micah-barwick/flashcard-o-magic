@@ -1,0 +1,70 @@
+.study-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.s-breadcrumb-main {
+    padding: 10px;
+    width: 100%;
+}
+
+
+.vd-deck-button-container {
+    display: flex;
+    justify-content: left;
+    gap: 3px;
+}
+
+.vd-deck-button-container> :last-child {
+    margin-left: auto;
+}
+
+.s-breadcrumb-main {
+    padding: 10px;
+    width: 100%;
+}
+
+.breadcrumb {
+
+    width: 100%;
+}
+
+.breadcrumb-text {
+    font-size: 20px;
+}
+
+.studyCards {
+    height: 100px;
+    width: 100%;
+    margin: 10px;
+}
+
+.vd-card-container {
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.vd-card-button-container {
+    display: flex;
+    justify-content: right;
+    gap: 3px;
+    /* Adjust the gap size as needed */
+}
+
+.vd-button-container> :last-child {
+    margin-left: auto;
+}
+
+.cardFlex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}

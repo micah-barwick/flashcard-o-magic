@@ -1,0 +1,33 @@
+.edit-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 75%;
+    margin: auto;
+}
+
+.ec-breadcrumb-main {
+    padding: 10px;
+    width: 100%;
+}
+
+.ec-breadcrumb {
+    padding: 10px;
+    width: 100%;
+}
+
+.ec-form {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    align-items: left;
+
+}
+
+.ec-button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+
+}

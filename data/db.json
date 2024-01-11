@@ -2,16 +2,91 @@
   "decks": [
     {
       "id": 1,
-      "name": "Math",
-      "description": "This deck will be used to help with Algebra"
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+    },
+    {
+      "id": 2,
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application."
+    },
+    {
+      "name": "Mario",
+      "description": "Luigi",
+      "id": 4
     }
   ],
   "cards": [
     {
-      "front": "What is multiplication?",
-      "back": "Is the process of calculating the product of two or more numbers. ",
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
+    },
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "id": 7,
+      "front": "putting deletes",
+      "back": "how come"
+    },
+    {
+      "front": "Can I add a card?",
+      "back": "yes",
+      "deckId": 2,
+      "id": 8
+    },
+    {
+      "front": "Add a card",
+      "back": "Ok",
       "deckId": 1,
-      "id": 1
+      "id": 12
+    },
+    {
+      "front": "Three cards",
+      "back": "ok",
+      "deckId": 1,
+      "id": 14
+    },
+    {
+      "front": "brah",
+      "back": "dude",
+      "deckId": 4,
+      "id": 15
+    },
+    {
+      "front": "New card",
+      "back": "please",
+      "deckId": 4,
+      "id": 16
+    },
+    {
+      "front": "asdfasdf",
+      "back": "asdfasdfdsf",
+      "deckId": 1,
+      "id": 17
+    },
+    {
+      "front": "hoody hoo",
+      "back": "try",
+      "deckId": 1,
+      "id": 18
+    },
+    {
+      "front": "qwerty",
+      "back": "qwerty",
+      "deckId": 1,
+      "id": 19
+    },
+    {
+      "front": "RDRRRR",
+      "back": "argh",
+      "deckId": 1,
+      "id": 20
     }
   ]
 }

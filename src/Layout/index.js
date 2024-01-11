@@ -1,47 +1,70 @@
-import React from "react";
-import { Route, Switch} from "react-router-dom";
-import CreateDeck from "./Decks/CreateDeck";
-import Header  from "./Header";
-import Decks  from "./Decks/Decks";
-import ViewDeck from "./Decks/ViewDeck"
-import ViewStudy  from "./Study/ViewStudy";
-import NotFound  from "./NotFound";
-import EditDeck from "./Decks/EditDeck";
-import CreateCard from "./Cards/CreateCard";
-import EditCard from "./Cards/EditCard";
+import React, { useState, useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
+// import Header from "./Shared/Header";
+// import NotFound from "./Shared/NotFound";
+import DeckList from "./Deck/DeckList.js";
+import { listDecks } from '../utils/api/index.js'
+import BreadcrumbNavbar from "./Shared/BreadcrumbNavbar";
+import CreateDeckButton from "./Shared/Buttons/CreateDeckButton";
+import DeckForm from "./Deck/DeckForm";
+import DeckView from "./Deck/DeckView.js";
+import CardForm from "./Cards/CardForm";
+import StudyView from "./Study/StudyView";
 
 function Layout() {
+  const [decks, setDecks] = useState([]);
+  
+  useEffect(() => {
+    async function getDecksFromApi() {
+      const response = await listDecks();
+      setDecks(response);
+    }
+    getDecksFromApi();
+  }, [])
+
   return (
     <div>
-    <Header />
-    <div className="container">
-      <Switch>
-        <Route exact path="/">
-          <Decks />
-        </Route>
-        <Route exact path="/decks/new">
-          <CreateDeck />
-        </Route>
-        <Route exact path ="/decks/:deckId">
-          <ViewDeck />
-        </Route>
-        <Route exact path="/decks/:deckId/edit">
-          <EditDeck />
-        </Route>
-        <Route exact path ="/decks/:deckId/cards/new">
-          <CreateCard />
-        </Route>
-        <Route exact path="/decks/:deckId/cards/:cardId/edit">
-          <EditCard />
-        </Route>
-        <Route exact path="/decks/:deckId/study">
-          <ViewStudy />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
-    </div>
+      <Header />
+      <BreadcrumbNavbar decks={decks} />
+      <div className="container">
+        <Switch>
+          <Route exact path="/">
+            <CreateDeckButton />   
+            {decks ?
+              <DeckList decks={decks} /> :  
+              <NotFound />
+            }
+          </Route>
+
+          <Route path="/decks/new">
+            <DeckForm />
+          </Route>
+
+          <Route exact path="/decks/:deckId">
+            <DeckView />
+          </Route>
+
+          <Route path="/decks/:deckId/study">
+            <StudyView />
+          </Route>
+
+          <Route path="/decks/:deckId/edit"> 
+            <DeckForm />
+          </Route>
+
+          <Route path="/decks/:deckId/cards/new">
+            <CardForm />
+          </Route>
+
+          <Route path="/decks/:deckId/cards/:cardId/edit">
+            <CardForm />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+
+        </Switch>
+      </div>
     </div>
   );
 }
